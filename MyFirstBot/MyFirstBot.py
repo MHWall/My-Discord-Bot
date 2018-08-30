@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import compliments
+import random
 
 prefix = ('!', '?', '~', '$')
 TOKEN = ""
@@ -20,6 +21,11 @@ async def info(ctx):
 async def compliment(ctx, *args):
     message = compliments.comp(*args)
     await ctx.send(message)
+
+@BOT.command(pass_context = False)
+async def choose(ctx, *args):
+    choice = random.choice(args)
+    await ctx.send("Between those, I choose " + choice + ", " + ctx.message.author.mention)
 
 
 @BOT.event
