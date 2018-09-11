@@ -27,6 +27,14 @@ async def choose(ctx, *args):
     choice = random.choice(args)
     await ctx.send("Between those, I choose " + choice + ", " + ctx.message.author.mention)
 
+#look up something on amazon
+
+#link to video on youtube
+
+#hangman with individual user. each user plays own game of hangman
+
+
+
 
 @BOT.event
 async def on_ready():
